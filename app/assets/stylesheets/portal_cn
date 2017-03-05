@@ -1,0 +1,12 @@
+/*#main #mainCampaign {background: url(/ie/img/panel/main/main_whatismuji_bg.jpg) center; margin-bottom: 40px;}
+#mainCampaign .titleContainer h1 {position: absolute; width: 100%; max-width: 100%; top: 170px; left: 0; font-size: 55px; color: #191919; text-align: center; margin: 0;}
+#mainCampaign .titleContainer h1 img {max-width: 100%;}
+
+@media screen and (max-width: 480px){
+  #mainCampaign .titleContainer h1 {top: 172px;}
+  #mainCampaign .titleContainer h1 img {width: 80%; max-width: 220px;}
+  #main #mainCampaign .titleContainer h1 {color: #191919;}
+}
+
+
+#main #mainCampaign {margin-bottom: 40px;}*/

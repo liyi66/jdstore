@@ -1,0 +1,75 @@
+.marker {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  cursor: pointer;
+}
+.marker .markerimage {
+  position: absolute;
+  top: -44px;
+  left: -17px;
+  background-image: url("../img/marker_gray_default.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  width: 33px;
+  height: 43px;
+  z-index: 10;
+}
+.marker .markerwithname {
+  position: absolute;
+  top: -44px;
+  left: -17px;
+  z-index: 20;
+}
+.marker .markerwithname .markerleft {
+  float: left;
+  width: 25px;
+  height: 44px;
+  background-image: url("../img/marker_gray_left.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 25px 43px;
+}
+.marker .markerwithname .markerrepeat {
+  float: left;
+  height: 38px;
+  padding-top: 6px;
+  background-image: url("../img/marker_gray_repeat.png");
+  background-repeat: repeat-x;
+  background-position: left top;
+  background-size: 10px 43px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+.marker .markerwithname .markerright {
+  float: left;
+  width: 29px;
+  height: 44px;
+  background: url("../img/marker_gray_right.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 29px 43px;
+}
+.marker.current .markerimage {
+  background-image: url("http://www.muji.com/img/marker_red_default.png");
+}
+.marker.current .markerwithname .markerleft {
+  background-image: url("http://www.muji.com/img/marker_red_left.png");
+}
+.marker.current .markerwithname .markerrepeat {
+  background-image: url("http://www.muji.com/img/marker_red_repeat.png");
+}
+.marker.current .markerwithname .markerright {
+  background-image: url("http://www.muji.com/img/marker_red_right.png");
+}
+.marker .markerid{
+	display: none;
+}
+.marker .markerlat{
+	display: none;
+}
+.marker .markerlng{
+	display: none;
+}

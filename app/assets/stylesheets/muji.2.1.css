@@ -1,0 +1,149 @@
+#globalHeader {font-size: 16px;}
+input[type="search"] {/*font-size: 1rem;*/ font-size: 12px; padding: 3px 10px;}
+a {text-decoration: none; color: #666;}
+
+#main {-webkit-transition: all .3s ease;}
+
+.cancel {text-align: right; padding: 18px 18px 0;}
+.cancel:before {content: url("/cn/store/contents/img/icon_close.png"); margin-right: 5px;}
+.blur {-webkit-filter: blur(5px); filter: blur(5px);}
+.annotation {font-size: 12px;}
+
+#globalHeader {height: 70px; position: relative; z-index: 100; width: 100%;}
+#globalHeader .headerWrap {width: 90%; margin: 0 auto; position: relative; max-width: 1024px;}
+#globalHeader .wrapper {background: rgba(0,0,0,.8); position: relative; z-index: 1000; width: 100%; color: #fff; font-size: 16px; padding: 0; box-sizing: border-box;}
+#globalHeader .wrapper ul {padding-left: 15%; margin: 0;}
+#globalHeader .wrapper li {list-style: none; float: left; font-size: 13px; padding: 28px 10px; line-height: 1;}
+#globalHeader .wrapper li.home {display: none; color: #333;}
+#globalHeader .wrapper li a {border: 0; display: block;}
+#globalHeader .wrapper li a:hover {color: #999;}
+
+#hSearch h1 {text-indent: -9999px; position: absolute; top: 10px; right: 0; padding: 25px; margin: 0; box-sizing: border-box; line-height: 2; padding-left: 30px; min-height: 28px; outline: none;}
+#hSearch .wrapper {display: block; left: 0;}
+#hSearch input[type="search"]{
+	/*z-index: 1001; width: 110px; border: 0; border-radius: 15px; position: absolute; right: 0; top: 20px;
+	background: url(/cn/store/contents/img/icon_search_b.png) no-repeat 10px center rgba(0,0,0,.05);
+	background-size: 18px 19px; color: #000;
+	padding-left: 30px; margin: 0; box-sizing: border-box; line-height: 2; min-height: 28px; font-size: 14px; outline: none;*/
+	width: 5px;
+	border-radius: 20px;
+	position: absolute;
+	right: 0;
+	top: -50px;
+	z-index: 1001;
+	border: 0;
+	background: url(/cn/store/contents/img/icon_search_b.png) no-repeat 10px center rgba(0,0,0,.05);
+	background-color: #fff;
+	background-size: 16px 17px; color: #000;
+	padding-left: 30px; margin: 0; box-sizing: border-box; line-height: 2;
+	-webkit-transition: width .3s;
+	transition: width .3s;
+	cursor: pointer;
+	::-webkit-input-placeholder {color: #333};
+	::-moz-placeholder {color: #333};
+	:-moz-placeholder {color: #333};
+	:-ms-input-placeholder {color: #333};
+}
+#hSearch input[type="search"]:focus {
+	width: 240px;
+	outline: none;
+	background-color: #eee;
+	cursor: text;
+}
+
+#hSearch .wrapper ul {display: none;}
+#siteName {z-index: 1001; top: 0; left: 0; margin: 0; position: absolute; width: 130px;}
+#siteName a {padding: 15px 0; display: block; line-height: 1;}
+
+#hGlobalNav h1 {background: url(/cn/store/contents/img/menu_b.png) no-repeat center center; text-indent: -9999px; background-size: 20px 15px; position: absolute; top: 0; left: 0; padding: 27px; margin: 0 0 0 -27px; cursor: pointer; width: 20px; height: 15px; z-index: 1001;}
+
+#globalHeader:after,
+#hSearch ul:after,
+footer:after {content: ""; display: block; clear: both;}
+
+footer {background: #000; line-height: 1; width: 100%;}
+footer nav {width: 90%; margin: 0 auto; max-width: 1024px;}
+footer ul {margin: 0; list-style: none;}
+footer {font-size: 14px; padding: 0;}
+footer ul {margin: 0; padding: 15px 0;}
+footer section + section ul {border-top: 1px solid #888;}
+footer ul:after {content: ''; display: block; clear: both;}
+footer li {float: left; padding-right: 20px; box-sizing: border-box;}
+footer li a {color: #e7e7e7; display: inline-block; padding: 10px 0;}
+
+.footerNav5 {position: relative;}
+.country img {width: 18px; height: 12px; margin-right: 8px;}
+#copyright {color: #ccc; width: 90%; margin: 0 auto; text-align: left; max-width: 1024px;}
+.copyright {display: inline-block; float: left; padding: 10px 20px 10px 0; color: #888;}
+
+footer nav.another ul {padding: 0;}
+footer nav.another li {width: auto;}
+footer nav.another li a {color: #ccc;}
+footer nav.another li span {padding: 10px 20px 10px 0; display: inline-block; color: #888;}
+
+.ua-desktop-windows.ua-ie-8 #globalHeader .wrapper li a,
+.ua-desktop-windows.ua-ie-9 #globalHeader .wrapper li a {font-weight: bold;}
+.ua-ie-8 #hSearch input[type="search"] {
+	z-index: 1001; width: 150px; border: 1px solid #666; border-radius: 15px; position: absolute; right: 10%; top: 15px;
+	background: url(/cn/store/contents/img/icon_search_b.png) no-repeat 10px center;
+	padding-left: 30px; margin: 0; line-height: 2; min-height: 28px; font-size: 14px; outline: none;
+}
+
+
+@media only screen and (min-width : 1061px){
+	#hGlobalNav h1,
+	.cancel {display: none;}
+	#globalHeader #hGlobalNav .wrapper {
+		display: block; background: none; height: auto; width: 100%; padding: 0;
+		margin: 0 auto;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		left: 0;
+	}
+}
+
+@media screen and (max-width : 1060px){
+	#globalHeader .headerWrap {width: 100%;}
+	#globalHeader .wrapper {background: rgba(0,0,0,.8); position: fixed; z-index: 1000; width: 100%; height: 100%; color: #fff; font-size: 16px; padding: 0; box-sizing: border-box; display: none;}
+	#globalHeader #hGlobalNav .wrapper li {font-size: 16px; padding: 0; text-align: center;}
+	#globalHeader .wrapper li {padding: 0; float: none;}
+	#globalHeader .wrapper li a {display: block; padding: 12px 20px; color: #fff;}
+	#globalHeader .wrapper ul {padding: 0;}
+
+  #hSearch input[type="search"] {background: none; border: solid #ccc; border-width: 0 0 1px; border-radius: 0;
+   -webkit-appearance: none; width: 95%; box-sizing: border-box; background: url(/cn/store/contents/img/icon_search_w.png) no-repeat left center;
+    background-size: 20px 21px; line-height: 2; padding-left: 30px; min-height: 28px; font-size: 14px; outline: none;
+    left: 20px; top: 80px;}
+  #hSearch input[type="search"]:focus {width: 95%;}
+	#hGlobalNav h1 {background: url(/cn/store/contents/img/menu_b.png) no-repeat center center; text-indent: -9999px; background-size: 20px 15px; position: absolute; top: 5px; left: 0; padding: 27px; margin: 0; cursor: pointer; width: 20px; height: 15px; z-index: 1001;}
+	#hGlobalNav h1 {margin-left: 3.5%;}
+
+  #siteName {position: absolute; top: 0; left: 0; z-index: 20; margin: 0; padding: 0; text-align: center; width: 100%;}
+	#siteName a {padding: 7px 0; display: inline-block;}
+	#siteName img {width: 145px; vertical-align: top; padding: 17px; border: 0;}
+	#hGlobalNav,
+	#hSearch {z-index: 1001;}
+	#hSearch h1 {text-indent: -9999px; background: url(/cn/store/contents/img/icon_search_b.png) no-repeat center center; width: 20px; height: 21px; background-size: 20px 21px; position: absolute; top: 8px; right: 3.5%; padding: 25px; margin: 0; box-sizing: border-box; line-height: 2; padding-left: 30px; min-height: 28px; font-size: 14px; outline: none; cursor: pointer; z-index: 100;}
+	#hSearch input[type="search"]:focus {background-color: transparent; color: #fff;}
+}
+
+@media screen and (max-width : 767px){
+	footer {font-size: 14px; padding: 0 0 15px;}
+	footer ul {margin: 0; padding: 15px 0;}
+	footer section + section ul {border-top: 1px solid #888;}
+	footer ul:after {content: ''; display: block; clear: both;}
+	footer li {float: left; width: 50%; line-height: 1.4; padding-right: 10px;}
+	footer li:nth-child(2n+0) {margin-right: 0; padding-right: 0;}
+	footer nav.another ul {padding: 0;}
+	footer nav.another li {width: 50%; padding-left: 0;}
+	footer li a {color: #e7e7e7; display: block; padding: 10px 0;}
+	footer nav.another li a {color: #ccc;}
+	.copyright {display: block; float: none;}
+}
+
+@media screen and (max-width : 480px){
+	#hGlobalNav h1 {margin-left: 2%;}
+	#hSearch input[type="search"] {width: 90%;}
+	/*#hSearch h1 {margin-right: 2%;}*/
+}

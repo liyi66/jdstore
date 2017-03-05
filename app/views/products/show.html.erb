@@ -22,6 +22,33 @@
             <% else %>
                 已销售一空，无法购买
            <% end %>
+
+                           <% if current_user %>
+                               <% if current_user.favorites.where(product: @product).empty? %>
+                               <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span>
+                               <%= link_to("Favor", favorites_path(product_id: @product), method: :post) %>
+                               </button>
+                               <% else %>
+                               <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span>
+                               <%= link_to("Unfavor", favorite_path(@product), method: :delete) %>
+                               </button>
+                               <% end %>
+                           <% else %>
+                                 <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span>
+                                 <%= link_to("Favor", favorites_path(product_id: @product), method: :post) %>
+                                 </button>
+                           <% end %>
+
         </div>
     </div>
 </div>
+
+              <h3 class="comments_title">
+                <%= @product.comments.count %> Comments
+              </h3>
+              <hr>
+              <div id="comments">
+                <%= render @product.comments%>
+                <%= render "comments/form"%>
+
+              </div>

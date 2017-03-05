@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :comments
     devise_for :users
-    root 'products#index'
+    root 'welcome#index'
     namespace :admin do
         resources :products
            resources :orders do
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
     member do
       post :add_to_cart
     end
+    resources :comments
   end
 
  resources :carts do
@@ -36,6 +38,7 @@ resources :cart_items
   end
 
  namespace :account do
-   resources :orders
+   resources :orders, :favorites, only: [:index]
  end
+ resources :favorites, only: [:create, :destroy]
 end
